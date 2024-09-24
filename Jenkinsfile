@@ -50,7 +50,7 @@ pipeline {
                             alwaysPublishLatest: true
                         ])
                     }
-        }       }
+        }       
     }
 
     post {
