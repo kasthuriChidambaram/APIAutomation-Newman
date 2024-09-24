@@ -6,9 +6,8 @@ newman.run({
     environment: require('./environment/BookingEnvironment.postman_environment.json'),
     reporters: 'htmlextra',
     reporter: {
-            html: {
-                export: './htmlResults.html', // If not specified, the file will be written to `newman/` in the current working directory.
-                template: './customTemplate.hbs' // optional, this will be picked up relative to the directory that Newman runs in.
+            htmlextra: {
+                export: './report.html' // If not specified, the file will be written to `newman/` in the current working directory.
             }
         }
 }, function (err) {

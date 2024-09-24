@@ -44,10 +44,10 @@ pipeline {
                         // Publish the HTML report using the HTML Publisher Plugin
                         publishHTML(target: [
                             reportName: 'Newman HTML Report',
-                            reportDir: 'APIAutomation-PostmanNewman/newman',
-                            reportFiles: '/*.html', // Change this if needed
+                            reportDir: 'APIAutomation-PostmanNewman',
+                            reportFiles: 'report.html', // Change this if needed
                             alwaysLinkToLastBuild: true,
-                            alwaysPublishLatest: true
+                            keepAll: true,
                         ])
                     }
         }
