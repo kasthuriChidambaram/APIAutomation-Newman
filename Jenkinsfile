@@ -38,6 +38,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Publish HTML Report') {
+                    steps {
+                        // Publish the HTML report using the HTML Publisher Plugin
+                        publishHTML(target: [
+                            reportName: 'Newman HTML Report',
+                            reportDir: 'APIAutomation-PostmanNewman/newman',
+                            reportFiles: '/*.html', // Change this if needed
+                            alwaysLinkToLastBuild: true,
+                            alwaysPublishLatest: true
+                        ])
+                    }
+        }       }
     }
 
     post {
