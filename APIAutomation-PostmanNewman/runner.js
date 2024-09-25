@@ -8,7 +8,7 @@ newman.run({
     reporter: {
             htmlextra: {
                 export: './report.html', // If not specified, the file will be written to `newman/` in the current working directory.
-                template: './template.hbs'
+
             }
         }
 }, function (err) {
